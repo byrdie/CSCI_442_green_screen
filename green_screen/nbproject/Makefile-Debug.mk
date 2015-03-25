@@ -52,21 +52,17 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=`pkg-config --libs opencv` OpenNI-Linux-x64-2.2/Tools/libOpenNI2.jni.so OpenNI-Linux-x64-2.2/Tools/libOpenNI2.so OpenNI-Linux-x64-2.2/Redist/OpenNI2/Drivers/libOniFile.so OpenNI-Linux-x64-2.2/Redist/OpenNI2/Drivers/libPS1080.so OpenNI-Linux-x64-2.2/Redist/OpenNI2/Drivers/libPSLink.so  
+LDLIBSOPTIONS=`pkg-config --libs opencv` OpenNI2/Bin/x64-Release/libMWClosestPoint.so OpenNI2/Bin/x64-Release/libOpenNI2.jni.so OpenNI2/Bin/x64-Release/libOpenNI2.so  
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/green_screen
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/green_screen: OpenNI-Linux-x64-2.2/Tools/libOpenNI2.jni.so
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/green_screen: OpenNI2/Bin/x64-Release/libMWClosestPoint.so
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/green_screen: OpenNI-Linux-x64-2.2/Tools/libOpenNI2.so
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/green_screen: OpenNI2/Bin/x64-Release/libOpenNI2.jni.so
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/green_screen: OpenNI-Linux-x64-2.2/Redist/OpenNI2/Drivers/libOniFile.so
-
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/green_screen: OpenNI-Linux-x64-2.2/Redist/OpenNI2/Drivers/libPS1080.so
-
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/green_screen: OpenNI-Linux-x64-2.2/Redist/OpenNI2/Drivers/libPSLink.so
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/green_screen: OpenNI2/Bin/x64-Release/libOpenNI2.so
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/green_screen: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
@@ -75,7 +71,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/green_screen: ${OBJECTFILES}
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -IOpenNI-Linux-x64-2.2/Include `pkg-config --cflags opencv`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -IOpenNI2/Include `pkg-config --cflags opencv`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:

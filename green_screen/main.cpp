@@ -36,8 +36,7 @@ int main() {
 
     rc = depth.create(device, openni::SENSOR_DEPTH);
 
-    if (rc == openni::STATUS_OK)
- {
+    if (rc == openni::STATUS_OK) {
 
         rc = depth.start();
         if (rc != openni::STATUS_OK) {
@@ -72,7 +71,7 @@ int main() {
         color.readFrame(&pFrame);
         depth.readFrame(&dep);
         openni::RGB888Pixel *pColor = (openni::RGB888Pixel *) pFrame.getData();
-        openni::DepthPixel* pDepth = (openni::DepthPixel *) pFrame.getData();
+        openni::DepthPixel* pDepth = (openni::DepthPixel *) dep.getData();
 
         for (int i = 0; i < frame.rows; i++) {
             for (int j = 0; j < frame.cols; j++) {
@@ -83,6 +82,8 @@ int main() {
         }
 
         cv::imshow("depth", bw);
+        cv::imshow("OpenCV", frame);
+
         c = cv::waitKey(10);
         if (c == 27)
             break;

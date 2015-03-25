@@ -37,17 +37,15 @@
       <compileType>
         <ccTool>
           <incDir>
-            <pElem>OpenNI-Linux-x64-2.2/Include</pElem>
+            <pElem>OpenNI2/Include</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
           <linkerLibItems>
             <linkerOptionItem>`pkg-config --libs opencv`</linkerOptionItem>
-            <linkerLibFileItem>OpenNI-Linux-x64-2.2/Tools/libOpenNI2.jni.so</linkerLibFileItem>
-            <linkerLibFileItem>OpenNI-Linux-x64-2.2/Tools/libOpenNI2.so</linkerLibFileItem>
-            <linkerLibFileItem>OpenNI-Linux-x64-2.2/Redist/OpenNI2/Drivers/libOniFile.so</linkerLibFileItem>
-            <linkerLibFileItem>OpenNI-Linux-x64-2.2/Redist/OpenNI2/Drivers/libPS1080.so</linkerLibFileItem>
-            <linkerLibFileItem>OpenNI-Linux-x64-2.2/Redist/OpenNI2/Drivers/libPSLink.so</linkerLibFileItem>
+            <linkerLibFileItem>OpenNI2/Bin/x64-Release/libMWClosestPoint.so</linkerLibFileItem>
+            <linkerLibFileItem>OpenNI2/Bin/x64-Release/libOpenNI2.jni.so</linkerLibFileItem>
+            <linkerLibFileItem>OpenNI2/Bin/x64-Release/libOpenNI2.so</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
